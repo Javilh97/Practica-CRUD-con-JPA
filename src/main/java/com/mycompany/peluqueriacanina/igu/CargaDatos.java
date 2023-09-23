@@ -180,11 +180,11 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\logotipo.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\recursos\\logotipo.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
 
         btnLimpiar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        btnLimpiar.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\limpiar.png")); // NOI18N
+        btnLimpiar.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\recursos\\limpiar.png")); // NOI18N
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +193,7 @@ public class CargaDatos extends javax.swing.JFrame {
         });
 
         btnGuardar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\salvar.png")); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\recursos\\guardar.png")); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
