@@ -4,6 +4,8 @@ package com.mycompany.peluqueriacanina.igu;
 import com.mycompany.peluqueriacanina.logica.Controladora;
 import com.mycompany.peluqueriacanina.logica.Mascota;
 import java.util.List;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class VerDatos extends javax.swing.JFrame {
@@ -56,6 +58,11 @@ public class VerDatos extends javax.swing.JFrame {
         jLabel2.setText("Datos de mascotas: ");
 
         btnEliminar.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\recursos\\eliminar.png")); // NOI18N
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         btnEditar.setIcon(new javax.swing.ImageIcon("C:\\Cursos\\curso_Java\\NetBeansProjects\\PeluqueriaCanina\\recursos\\editar.png")); // NOI18N
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +151,41 @@ public class VerDatos extends javax.swing.JFrame {
         cargarTabla();
     }//GEN-LAST:event_formWindowOpened
 
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        
+        //Controlo que la tabla no este vacia
+        if(tablaMascotas.getRowCount() > 0){
+            //Controlo que se haya seleccionado un registro
+            if(tablaMascotas.getSelectedRow()!=-1){
+                //Obtengo el id de la mascota a eliminar
+               int numCliente = Integer.parseInt(String.valueOf(
+                    tablaMascotas.getValueAt(tablaMascotas.getSelectedRow(), 0)));
+               //llamamos al metodo borrar 
+               control.borrarMascotas(numCliente);
+               //Informamos que el registro se borro correctamente
+               mostrarMensaje("El registro se ha eliminado exitosamente", "Info","Borrado Exitoso");
+               cargarTabla();
+            } else{
+                mostrarMensaje("No selecciono un registro", "Error","Falta seleccion");
+            }
+        } else {
+            mostrarMensaje("No hay registros para borrar en la BD", "Error","No hay registros existentes");
+        }
+        
+    }//GEN-LAST:event_btnEliminarActionPerformed
+    
+    public void mostrarMensaje(String mensaje, String tipo, String titulo){
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if(tipo.equals("Info")){
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if(tipo.equals("Error")){
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
