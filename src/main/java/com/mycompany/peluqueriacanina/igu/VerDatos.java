@@ -144,7 +144,27 @@ public class VerDatos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
+        
+        //Controlo que la tabla no este vacia
+        if(tablaMascotas.getRowCount() > 0){
+            //Controlo que se haya seleccionado un registro
+            if(tablaMascotas.getSelectedRow()!=-1){
+                //Obtengo el id de la mascota a editar
+               int numCliente = Integer.parseInt(String.valueOf(
+                    tablaMascotas.getValueAt(tablaMascotas.getSelectedRow(), 0)));
+               ModificarDatos pantallaModif = new ModificarDatos(numCliente);
+               pantallaModif.setVisible(true);
+               pantallaModif.setLocationRelativeTo(null);
+               
+               this.dispose();
+               
+            } else{
+                mostrarMensaje("No selecciono un registro", "Error","Falta seleccion");
+            }
+        } else {
+            
+            mostrarMensaje("No hay registros para borrar en la BD", "Error","No hay registros existentes");
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
