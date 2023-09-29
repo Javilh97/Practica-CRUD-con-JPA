@@ -13,6 +13,7 @@ com\mycompany\peluqueriacanina\igu\ModificarDatos$2.class
 com\mycompany\peluqueriacanina\igu\ModificarDatos$7.class
 com\mycompany\peluqueriacanina\persistencia\exceptions\PreexistingEntityException.class
 com\mycompany\peluqueriacanina\igu\VerDatos$4.class
+com\mycompany\peluqueriacanina\igu\CargaDatos$8.class
 com\mycompany\peluqueriacanina\igu\VerDatos.class
 com\mycompany\peluqueriacanina\igu\ModificarDatos$5.class
 com\mycompany\peluqueriacanina\igu\VerDatos$2.class
@@ -27,6 +28,7 @@ com\mycompany\peluqueriacanina\persistencia\MascotaJpaController.class
 com\mycompany\peluqueriacanina\logica\Controladora.class
 com\mycompany\peluqueriacanina\persistencia\DuenioJpaController.class
 com\mycompany\peluqueriacanina\igu\CargaDatos$7.class
+com\mycompany\peluqueriacanina\igu\VerDatos$5.class
 com\mycompany\peluqueriacanina\persistencia\ControladoraPersistencia.class
 com\mycompany\peluqueriacanina\logica\Mascota.class
 com\mycompany\peluqueriacanina\logica\Mascota_.class
@@ -34,4 +36,5 @@ com\mycompany\peluqueriacanina\igu\VerDatos$3.class
 com\mycompany\peluqueriacanina\igu\CargaDatos$4.class
 com\mycompany\peluqueriacanina\igu\ModificarDatos$3.class
 com\mycompany\peluqueriacanina\PeluqueriaCanina.class
+com\mycompany\peluqueriacanina\igu\ModificarDatos$8.class
 com\mycompany\peluqueriacanina\igu\Principal$3.class
