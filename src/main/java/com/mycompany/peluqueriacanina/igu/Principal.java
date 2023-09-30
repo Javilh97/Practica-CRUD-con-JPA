@@ -1,6 +1,9 @@
 
 package com.mycompany.peluqueriacanina.igu;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 public class Principal extends javax.swing.JFrame {
 
     public Principal() {
@@ -122,7 +125,17 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        System.exit(0);
+        
+        String botones[] = {"Cerrar","Cancelar"};
+        int seleccion = JOptionPane.showOptionDialog(this,
+                "¿Desea cerrar la aplicación?", "Salir",
+                0, JOptionPane.WARNING_MESSAGE, null,
+                botones, this);
+        if(seleccion == JOptionPane.YES_OPTION){
+            System.exit(0);
+        } else if(seleccion == JOptionPane.NO_OPTION){
+            
+        }
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnCargarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarDatosActionPerformed
